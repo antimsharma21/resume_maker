@@ -1,0 +1,124 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-100 via-blue-100 to-indigo-200">
+
+<div class="flex flex-row gap-8 p-8 w-full min-h-screen items-start justify-center flex-wrap">
+
+    <div id="main-div " class="rounded-3xl">
+
+        <section
+            class="border border-white/70 rounded-3xl bg-white/80 backdrop-blur-xl w-150 min-h-[650px] p-7 shadow-2xl shadow-blue-900/10"
+            id="main-sections"
+        >
+
+            <h1
+                id="heading"
+                class="font-extrabold text-2xl text-slate-800 mb-7 pb-4 border-b-2 border-blue-100 tracking-tight"
+            >
+                Personal Details
+            </h1>
+
+            <article
+                id="personal-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <article
+                id="education-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <article
+                id="company-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <article
+                id="skills-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <article
+                id="project-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <article
+                id="note-details"
+                class="bg-white rounded-2xl p-3"
+            ></article>
+
+            <div id="edit" class="mt-6 pt-5 border-t-2 border-blue-100"></div>
+
+        </section>
+
+    </div>
+
+
+    <div
+        id="resume-area"
+        class="bg-white border border-slate-200 rounded-3xl w-[800px] min-h-[800px] p-10 flex-none shadow-2xl shadow-slate-900/15"
+    >
+
+        <h1
+            class="underline mt-2 decoration-double underline-offset-8 font-black text-center text-3xl tracking-[0.35em] text-slate-800"
+        >
+            RESUME
+        </h1>
+
+        <hr class="my-6 border-0 h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent">
+
+        <div id="personal" class="bg-white rounded-xl"></div>
+
+        <br>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+        <div id="education-data" class="bg-white rounded-xl"></div>
+
+        <br>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+        <div id="company-in-html" class="bg-white rounded-xl"></div>
+
+        <br>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+        <div id="skills" class="bg-white rounded-xl"></div>
+
+        <br>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+        <div id="projects" class="bg-white rounded-xl"></div>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+        <div id="note" class="bg-white rounded-xl"></div>
+
+        <hr class="my-5 border-0 h-px bg-slate-200">
+
+    </div>
+
+</div>
+
+<script src="initialState.js"></script>
+
+<script src="resume.js"></script>
+<script src="education.js"></script>
+
+<script src="job.js"></script>
+<script src="skills.js"></script>
+<script src="project.js"></script>
+<script src="makeresume.js"></script>
+<script src="edit.js"></script>
+<script src="note.js"></script>
+
+</body>
+</html>
