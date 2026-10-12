@@ -1,41 +1,1131 @@
-let mynote=[];
+let mynote = [];
+
 
 let note = document.createElement("div");
-note.className="rounded-2xl bg-gradient-to-br from-white to-blue-50 p-4 shadow-sm";
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
 noteDetails.appendChild(note);
 
-createTextArea(note,"text","note","enter your finishing note");
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
 
 
-let submitFornote = document.createElement("button");
-submitFornote.innerText="Submit";
-submitFornote.className="w-full h-11 rounded-xl mt-5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold shadow-lg shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5";
-note.appendChild(submitFornote);
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
 
 
-submitFornote.addEventListener("click",()=>{
+// ------------------------------------
+// NOTE
+// ------------------------------------
 
-mydetails={
-"NOTE" :document.getElementById("note").value, 
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
 
-};
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
 
 
-mynote.push(mydetails);
+submitFornote.addEventListener("click", () => {
 
-console.log("skills ",myskills);
+    mydetails = {
 
-personalDetails.style.display="none";
+        "NOTE":
+            document.getElementById("note").value
 
-educationDetails.style.display="none";
-companyDetails.style.display="none";
-projectDetails.style.display="none";
-skillsDetails.style.display="none";
-noteDetails.style.display="none";
+    };
 
-showNoteData();
 
-console.log(myskills);
-console.log("education   inside");
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
+
+});let mynote = [];
+
+
+let note = document.createElement("div");
+
+note.className =
+    "rounded-2xl bg-white border border-slate-200 " +
+    "p-5 shadow-sm shadow-slate-200/70";
+
+noteDetails.appendChild(note);
+
+
+// ------------------------------------
+// HEADER
+// ------------------------------------
+
+let noteTitle = document.createElement("div");
+
+noteTitle.className = "mb-5";
+
+
+noteTitle.innerHTML = `
+    <div class="flex items-center gap-3">
+
+        <div class="w-10 h-10 rounded-xl
+                    bg-amber-100 text-amber-600
+                    flex items-center justify-center">
+
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="21"
+                 height="21"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M8 13h8"/>
+                <path d="M8 17h5"/>
+
+            </svg>
+
+        </div>
+
+        <div>
+
+            <h2 class="font-bold text-lg text-slate-800">
+                Finishing Note
+            </h2>
+
+            <p class="text-xs text-slate-500">
+                Add any additional information
+            </p>
+
+        </div>
+
+    </div>
+`;
+
+note.appendChild(noteTitle);
+
+
+// ------------------------------------
+// NOTE
+// ------------------------------------
+
+createTextArea(
+    note,
+    "text",
+    "note",
+    "Enter your finishing note..."
+);
+
+
+// ------------------------------------
+// SUBMIT
+// ------------------------------------
+
+let submitFornote =
+    createBtn(note, "Finish Resume");
+
+
+submitFornote.addEventListener("click", () => {
+
+    mydetails = {
+
+        "NOTE":
+            document.getElementById("note").value
+
+    };
+
+
+    mynote.push(mydetails);
+
+
+    personalDetails.style.display = "none";
+
+    educationDetails.style.display = "none";
+
+    companyDetails.style.display = "none";
+
+    projectDetails.style.display = "none";
+
+    skillsDetails.style.display = "none";
+
+    noteDetails.style.display = "none";
+
+
+    showNoteData();
 
 });
